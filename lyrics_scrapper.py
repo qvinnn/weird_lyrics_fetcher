@@ -2,9 +2,12 @@ import requests
 
 from bs4 import BeautifulSoup
 
+#ask user for a musixmatch link
+user_input = input("insert musixmatch URL:\n")
+
 #Setting up requests-HTML and Soup 
 page = requests.get(
-    "https://www.musixmatch.com/lyrics/jaz-22/why-is-it-so-loud-in-here-Jaycie-Rhetorical",
+    user_input,
     headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     
 )
